@@ -14,6 +14,7 @@ void solve()
     if (*s.begin() <= 0)
     {
         cout << "Triangle Not Possible\n";
+        solve();
         return;
     }
     if (a + b <= c || b + c <= a && c + a <= b)
@@ -38,7 +39,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
         solve();
     return 0;
